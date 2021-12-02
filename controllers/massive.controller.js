@@ -16,7 +16,12 @@ const listLines = (socket) => {
 }
 
 function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+function getGender(i) {
+  const gender = ['homi', 'muie'];
+  return gender[i]
 }
 
 function newProcessedLine(io, room) {
@@ -26,7 +31,7 @@ function newProcessedLine(io, room) {
   const data = {
     name: `${id} - ${to}`,
     age: getRandomArbitrary(17, 25),
-    gender: 'Male',
+    gender: getGender(Math.floor(Math.random() * 2)),
     address:
       '1197 Thunder Wagon Common, Cataract, RI, 02987-1016, US, (401) 747-0763',
     city: 'Adamantina',
