@@ -20,7 +20,7 @@ function getRandomArbitrary(min, max) {
 }
 
 function getGender(i) {
-  const gender = ['homi', 'muie'];
+  const gender = ['M', 'F'];
   return gender[i]
 }
 
